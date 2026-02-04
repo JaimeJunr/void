@@ -1,112 +1,112 @@
-# Code - OSS Development Container
+# Development Container do Code - OSS
 
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode)
 
-This repository includes configuration for a development container for working with Code - OSS in a local container or using [GitHub Codespaces](https://github.com/features/codespaces).
+Este repositório inclui configuração de um development container para trabalhar com o Code - OSS em um container local ou usando [GitHub Codespaces](https://github.com/features/codespaces).
 
-> **Tip:** The default VNC password is `vscode`. The VNC server runs on port `5901` and a web client is available on port `6080`.
+> **Dica:** A senha padrão do VNC é `vscode`. O servidor VNC roda na porta `5901` e um cliente web está disponível na porta `6080`.
 
-## Quick start - local
+## Início rápido — local
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+Se você já tem o VS Code e o Docker instalados, pode clicar no badge acima ou [aqui](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) para começar. Ao clicar nesses links, o VS Code instalará a extensão Dev Containers se necessário, clonará o código-fonte em um volume do container e subirá um dev container para uso.
 
-1. Install Docker Desktop or Docker for Linux on your local machine. (See [docs](https://aka.ms/vscode-remote/containers/getting-started) for additional details.)
+1. Instale o Docker Desktop ou o Docker for Linux na sua máquina. (Veja a [documentação](https://aka.ms/vscode-remote/containers/getting-started) para mais detalhes.)
 
-2. **Important**: Docker needs at least **4 Cores and 8 GB of RAM** to run a full build with **9 GB of RAM** being recommended. If you are on macOS, or are using the old Hyper-V engine for Windows, update these values for Docker Desktop by right-clicking on the Docker status bar item and going to **Preferences/Settings > Resources > Advanced**.
+2. **Importante:** o Docker precisa de pelo menos **4 cores e 8 GB de RAM** para um build completo; **9 GB de RAM** é o recomendado. No macOS ou ao usar o motor Hyper-V antigo no Windows, ajuste esses valores no Docker Desktop clicando com o botão direito no ícone do Docker na barra de status e indo em **Preferences/Settings > Resources > Advanced**.
 
-   > **Note:** The [Resource Monitor](https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor) extension is included in the container so you can keep an eye on CPU/Memory in the status bar.
+   > **Nota:** A extensão [Resource Monitor](https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor) vem no container para você acompanhar CPU/memória na barra de status.
 
-3. Install [Visual Studio Code Stable](https://code.visualstudio.com/) or [Insiders](https://code.visualstudio.com/insiders/) and the [Dev Containers](https://aka.ms/vscode-remote/download/containers) extension.
+3. Instale o [Visual Studio Code Stable](https://code.visualstudio.com/) ou [Insiders](https://code.visualstudio.com/insiders/) e a extensão [Dev Containers](https://aka.ms/vscode-remote/download/containers).
 
-   ![Image of Dev Containers extension](https://microsoft.github.io/vscode-remote-release/images/dev-containers-extn.png)
+   ![Imagem da extensão Dev Containers](https://microsoft.github.io/vscode-remote-release/images/dev-containers-extn.png)
 
-   > **Note:** The Dev Containers extension requires the Visual Studio Code distribution of Code - OSS. See the [FAQ](https://aka.ms/vscode-remote/faq/license) for details.
+   > **Nota:** A extensão Dev Containers exige a distribuição Visual Studio Code do Code - OSS. Veja a [FAQ](https://aka.ms/vscode-remote/faq/license) para detalhes.
 
-4. Press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd> and select **Dev Containers: Clone Repository in Container Volume...**.
+4. Pressione <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> ou <kbd>F1</kbd> e selecione **Dev Containers: Clone Repository in Container Volume...**.
 
-   > **Tip:** While you can use your local source tree instead, operations like `npm i` can be slow on macOS or when using the Hyper-V engine on Windows. We recommend using the WSL filesystem on Windows or the "clone repository in container" approach on Windows and macOS instead since it uses "named volume" rather than the local filesystem.
+   > **Dica:** Você pode usar sua árvore de código local, mas operações como `npm i` podem ser lentas no macOS ou com o motor Hyper-V no Windows. Recomendamos usar o sistema de arquivos WSL no Windows ou a opção "clone repository in container" no Windows e macOS, pois usam "named volume" em vez do sistema de arquivos local.
 
-5. Type `https://github.com/microsoft/vscode` (or a branch or PR URL) in the input box and press <kbd>Enter</kbd>.
+5. Digite `https://github.com/microsoft/vscode` (ou uma branch ou URL de PR) na caixa de entrada e pressione <kbd>Enter</kbd>.
 
-6. After the container is running:
-    1. If you have the `DISPLAY` or `WAYLAND_DISPLAY` environment variables set locally (or in WSL on Windows), desktop apps in the container will be shown in local windows.
-    2. If these are not set, open a web browser and go to [http://localhost:6080](http://localhost:6080), or use a [VNC Viewer][def] to connect to `localhost:5901` and enter `vscode` as the password. Anything you start in VS Code, or the integrated terminal, will appear here.
+6. Com o container em execução:
+   1. Se as variáveis de ambiente `DISPLAY` ou `WAYLAND_DISPLAY` estiverem definidas localmente (ou no WSL no Windows), os apps de desktop do container aparecerão em janelas locais.
+   2. Se não estiverem definidas, abra um navegador em [http://localhost:6080](http://localhost:6080) ou use um [VNC Viewer][def] para conectar em `localhost:5901` e digite `vscode` como senha. Tudo que você iniciar no VS Code ou no terminal integrado aparecerá aí.
 
-Next: **[Try it out!](#try-it)**
+Em seguida: **[Experimente!](#experimente)**
 
-## Quick start - GitHub Codespaces
+## Início rápido — GitHub Codespaces
 
-1. From the [microsoft/vscode GitHub repository](https://github.com/microsoft/vscode), click on the **Code** dropdown, select **Open with Codespaces**, and then click on **New codespace**. If prompted, select the **Standard** machine size (which is also the default).
+1. No [repositório microsoft/vscode no GitHub](https://github.com/microsoft/vscode), clique no menu **Code**, selecione **Open with Codespaces** e depois **New codespace**. Se pedir, escolha o tamanho **Standard** (4 cores, 8 GB), que também é o padrão.
 
-   > **Note:** You will not see these options within GitHub if you are not in the Codespaces beta.
+   > **Nota:** Essas opções não aparecem no GitHub se você não estiver no beta do Codespaces.
 
-2. After the codespace is up and running in your browser, press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd> and select **Ports: Focus on Ports View**.
+2. Com o codespace rodando no navegador, pressione <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> ou <kbd>F1</kbd> e selecione **Ports: Focus on Ports View**.
 
-3. You should see **VNC web client (6080)** under in the list of ports. Select the line and click on the globe icon to open it in a browser tab.
+3. Na lista de portas você deve ver **VNC web client (6080)**. Selecione a linha e clique no ícone de globo para abrir em uma aba do navegador.
 
-    > **Tip:** If you do not see the port, <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd>, select **Forward a Port** and enter port `6080`.
+   > **Dica:** Se a porta não aparecer, <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> ou <kbd>F1</kbd>, selecione **Forward a Port** e informe a porta `6080`.
 
-4. In the new tab, you should see noVNC. Click **Connect** and enter `vscode` as the password.
+4. Na nova aba deve aparecer o noVNC. Clique em **Connect** e digite `vscode` como senha.
 
-Anything you start in VS Code, or the integrated terminal, will appear here.
+Tudo que você iniciar no VS Code ou no terminal integrado aparecerá aí.
 
-Next: **[Try it out!](#try-it)**
+Em seguida: **[Experimente!](#experimente)**
 
-### Using VS Code with GitHub Codespaces
+### Usando o VS Code com o GitHub Codespaces
 
-You may see improved VNC responsiveness when accessing a codespace from VS Code client since you can use a [VNC Viewer][def]. Here's how to do it.
+A responsividade do VNC pode ser melhor ao acessar o codespace pelo cliente VS Code, pois você pode usar um [VNC Viewer][def]. Passos:
 
-1. Install [Visual Studio Code Stable](https://code.visualstudio.com/) or [Insiders](https://code.visualstudio.com/insiders/) and the [GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces).
+1. Instale o [Visual Studio Code Stable](https://code.visualstudio.com/) ou [Insiders](https://code.visualstudio.com/insiders/) e a extensão [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces).
 
-    > **Note:** The GitHub Codespaces extension requires the Visual Studio Code distribution of Code - OSS.
+   > **Nota:** A extensão GitHub Codespaces exige a distribuição Visual Studio Code do Code - OSS.
 
-2. After the VS Code is up and running, press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd>, choose **Codespaces: Create New Codespace**, and use the following settings:
+2. Com o VS Code aberto, pressione <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> ou <kbd>F1</kbd>, escolha **Codespaces: Create New Codespace** e use:
 
-- `microsoft/vscode` for the repository.
-- Select any branch (e.g. **main**) - you can select a different one later.
-- Choose **Standard** (4-core, 8GB) as the size.
+- `microsoft/vscode` como repositório.
+- Selecione qualquer branch (ex.: **main**) — você pode trocar depois.
+- Tamanho **Standard** (4 cores, 8 GB).
 
-3. After you have connected to the codespace, you can use a [VNC Viewer][def] to connect to `localhost:5901` and enter `vscode` as the password.
+3. Após conectar ao codespace, use um [VNC Viewer][def] para conectar em `localhost:5901` e digite `vscode` como senha.
 
-    > **Tip:** You may also need change your VNC client's **Picture Quality** setting to **High** to get a full color desktop.
+   > **Dica:** Pode ser necessário mudar **Picture Quality** do cliente VNC para **High** para ver o desktop em cores.
 
-4. Anything you start in VS Code, or the integrated terminal, will appear here.
+4. Tudo que você iniciar no VS Code ou no terminal integrado aparecerá aí.
 
-Next: **[Try it out!](#try-it)**
+Em seguida: **[Experimente!](#experimente)**
 
-## Try it
+## Experimente
 
-This container uses the [Fluxbox](http://fluxbox.org/) window manager to keep things lean. **Right-click on the desktop** to see menu options. It works with GNOME and GTK applications, so other tools can be installed if needed.
+Este container usa o gerenciador de janelas [Fluxbox](http://fluxbox.org/) para manter o ambiente enxuto. **Clique com o botão direito na área de trabalho** para ver as opções de menu. Funciona com aplicações GNOME e GTK; outras ferramentas podem ser instaladas se precisar.
 
-   > **Note:** You can also set the resolution from the command line by typing `set-resolution`.
+> **Nota:** Você também pode definir a resolução pelo terminal com o comando `set-resolution`.
 
-To start working with Code - OSS, follow these steps:
+Para começar a trabalhar com o Code - OSS:
 
-1. In your local VS Code client, open a terminal (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>\`</kbd>) and type the following commands:
+1. No seu cliente VS Code local, abra um terminal (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>\`</kbd>) e execute:
 
    ```bash
    npm i
    bash scripts/code.sh
    ```
 
-2. After the build is complete, open a web browser or a [VNC Viewer][def] to connect to the desktop environment as described in the quick start and enter `vscode` as the password.
+2. Quando o build terminar, abra um navegador ou um [VNC Viewer][def] para conectar ao ambiente de desktop como no início rápido e digite `vscode` como senha.
 
-3. You should now see Code - OSS!
+3. O Code - OSS deve aparecer na tela.
 
-Next, let's try debugging.
+Agora vamos testar o debug.
 
-1. Shut down Code - OSS by clicking the box in the upper right corner of the Code - OSS window through your browser or VNC viewer.
+1. Feche o Code - OSS clicando no X no canto superior direito da janela (pelo navegador ou VNC viewer).
 
-2. Go to your local VS Code client, and use the **Run / Debug** view to launch the **VS Code** configuration. (Typically the default, so you can likely just press <kbd>F5</kbd>).
+2. No seu cliente VS Code local, use a view **Run / Debug** para iniciar a configuração **VS Code**. (Geralmente é a padrão; você pode apenas pressionar <kbd>F5</kbd>.)
 
-   > **Note:** If launching times out, you can increase the value of `timeout` in the "VS Code", "Attach Main Process", "Attach Extension Host", and "Attach to Shared Process" configurations in [launch.json](../../.vscode/launch.json). However, running `./scripts/code.sh` first will set up Electron which will usually solve timeout issues.
+   > **Nota:** Se der timeout ao iniciar, você pode aumentar o valor de `timeout` nas configurações "VS Code", "Attach Main Process", "Attach Extension Host" e "Attach to Shared Process" em [launch.json](../../.vscode/launch.json). Rodar `./scripts/code.sh` antes costuma configurar o Electron e resolver o timeout.
 
-3. After a bit, Code - OSS will appear with the debugger attached!
+3. Em seguida o Code - OSS deve abrir com o debugger conectado.
 
-Enjoy!
+Bom uso!
 
-### Notes
+### Notas
 
-The container comes with VS Code Insiders installed. To run it from an Integrated Terminal use `VSCODE_IPC_HOOK_CLI= /usr/bin/code-insiders .`.
+O container vem com o VS Code Insiders instalado. Para rodá-lo a partir de um Terminal Integrado use `VSCODE_IPC_HOOK_CLI= /usr/bin/code-insiders .`.
 
 [def]: https://www.realvnc.com/en/connect/download/viewer/
