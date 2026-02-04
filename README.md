@@ -1,41 +1,30 @@
-# Welcome to Void.
+# Bem-vindo ao CortexAI
 
 <div align="center">
 	<img
 		src="./src/vs/workbench/browser/parts/editor/media/slice_of_void.png"
-	 	alt="Void Welcome"
+	 	alt="Boas-vindas ao CortexAI"
 		width="300"
 	 	height="300"
 	/>
 </div>
 
-Void is the open-source Cursor alternative.
+O CortexAI é uma extensão e evolução do [Void](https://github.com/voideditor/void), que por sua vez é fork do [VS Code](https://github.com/microsoft/vscode). Editor open-source com IA no código.
 
-Use AI agents on your codebase, checkpoint and visualize changes, and bring any model or host locally. Void sends messages directly to providers without retaining your data.
+Use agentes de IA no seu código, faça checkpoint e visualize alterações, e use qualquer modelo ou host localmente. O CortexAI envia mensagens diretamente aos provedores sem reter seus dados.
 
-This repo contains the full sourcecode for Void. If you're new, welcome!
+Este repositório contém o código-fonte completo do CortexAI. Se você é novo por aqui, seja bem-vindo!
 
-- 🧭 [Website](https://voideditor.com)
+- [Site](https://cortexai.com)
+- [Repositório](https://github.com/cortexai/cortexai)
+- [Issues](https://github.com/cortexai/cortexai/issues)
 
-- 👋 [Discord](https://discord.gg/RSNjgaugJs)
+## Nota
 
-- 🚙 [Project Board](https://github.com/orgs/voideditor/projects/2)
+O CortexAI é mantido como produto independente. A base original [Void](https://github.com/voideditor/void) pausou o desenvolvimento ativo como IDE; este fork continua em evolução.
 
+## Referência
 
-## Note
+O CortexAI é um fork do [Void](https://github.com/voideditor/void), que é um fork do [vscode](https://github.com/microsoft/vscode). Para um guia do codebase, veja [CORTEXAI_CODEBASE_GUIDE.md](CORTEXAI_CODEBASE_GUIDE.md).
 
-We've paused work on the Void IDE (this repo) to explore a few novel coding ideas. We want to focus on innovation over feature-parity. Void will continue running, but without maintenance some existing features might stop working over time. Depending on the direction of our new work, we might not resume Void as an IDE.
-
-We won't be actively reviewing Issues and PRs, but we will respond to all [email](mailto:hello@voideditor.com) inquiries on building and maintaining your own version of Void while we're paused. 
-
-## Reference
-
-Void is a fork of the [vscode](https://github.com/microsoft/vscode) repository. For a guide to the codebase, see [VOID_CODEBASE_GUIDE](https://github.com/voideditor/void/blob/main/VOID_CODEBASE_GUIDE.md).
-
-For a guide on how to develop your own version of Void, see [HOW_TO_CONTRIBUTE](https://github.com/voideditor/void/blob/main/HOW_TO_CONTRIBUTE.md) and [void-builder](https://github.com/voideditor/void-builder).
-
-
-
-
-## Support
-You can always reach us in our Discord server or contact us via email: hello@voideditor.com.
+Para um guia de como desenvolver e contribuir, veja [CONTRIBUTING.md](CONTRIBUTING.md). Para pipeline de build (instaladores), o projeto pode ser baseado no [void-builder](https://github.com/voideditor/void-builder) com adaptações.
