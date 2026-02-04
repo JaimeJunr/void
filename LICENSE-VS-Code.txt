@@ -1,5 +1,4 @@
-Void is a fork of VS Code, which is licensed under the MIT License (below).
-Void's additions and modifications are licensed under the Apache 2.0 License (see LICENSE.txt).
+CortexAI is a fork of Void, which is a fork of VS Code. VS Code is licensed under the MIT License (below). Void's and CortexAI's additions and modifications are licensed under the Apache License 2.0 (see LICENSE.txt).
 
 --------------------
 

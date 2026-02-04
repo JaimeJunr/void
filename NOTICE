@@ -1,0 +1,8 @@
+CortexAI
+Copyright 2025 CortexAI
+
+This project is a fork of Void (https://github.com/voideditor/void), which is a fork of VS Code (https://github.com/microsoft/vscode).
+
+- VS Code: Copyright (c) 2015 - present Microsoft Corporation. Licensed under the MIT License.
+- Void: Additions and modifications by the Void project, licensed under the Apache License 2.0.
+- CortexAI: Additions and modifications by CortexAI, licensed under the Apache License 2.0. See LICENSE.txt.
